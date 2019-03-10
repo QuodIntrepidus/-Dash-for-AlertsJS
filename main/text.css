@@ -1,0 +1,58 @@
+@keyframes expand {
+	from {height: 15vh}
+	to {height: 100%}
+}
+
+.AlertBox {
+	color: white;
+	position: relative;
+	display: inline-block;
+	margin: 20px 20px;
+	max-width: 35vw;
+	max-height: 50vh;
+	width: 30vw;
+	height: 15vh;
+	padding: 20px 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	transform: scale(0.85);
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 20px;
+}
+.AlertBox:hover {
+	white-space: normal;
+	height: 100%;
+	transition: height .7s;
+}
+
+.AlertBox img {
+	float: left;
+	margin: 10px 10px;
+	padding: 10px, 30px;
+}
+.AlertBox p {
+    display: inline;
+}
+
+
+.AlertBox h3 {
+	margin: 10px 10px;
+	padding: 0 10px;
+	overflow: auto;
+}
+
+#New_Message {
+	background-color: blue;
+	margin-top: 150px; 
+}
+#Success {
+	background-color: green;
+}
+#Error {
+	background-color: red;
+}
+#Info {
+	background-color: yellow;
+	margin-bottom: 150px;
+}
