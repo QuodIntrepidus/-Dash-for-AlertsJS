@@ -1,29 +1,48 @@
-@keyframes expand {
-	from {height: 15vh}
-	to {height: 100%}
+@keyframes beauty {
+
+ 	0% {opacity: 0; transform:scale(0);}
+  	100% {opacity: 1; transform:scale(1);}
+}
+@keyframes loading {
+	100% {width:100%;}
 }
 
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transform: scale(0.8);
+  }
+}
+
+.parent {
+	float: left;
+	margin: 10px 10px;
+	animation: beauty 2s linear 1;
+}
 .AlertBox {
-	color: white;
+	color: black;
+	box-sizing: content-box;
 	position: relative;
 	display: inline-block;
 	margin: 20px 20px;
-	max-width: 35vw;
-	max-height: 50vh;
+	max-width: 30vw;
+	max-height: 15vh;
 	width: 30vw;
 	height: 15vh;
 	padding: 20px 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	transform: scale(0.85);
+	transform: scale(0.80);
 	border: 1px solid rgb(0, 0, 0);
-	border-radius: 20px;
-}
-.AlertBox:hover {
-	white-space: normal;
-	height: 100%;
-	transition: height .7s;
+	border-radius: 0;
 }
 
 .AlertBox img {
@@ -32,27 +51,58 @@
 	padding: 10px, 30px;
 }
 .AlertBox p {
-    display: inline;
+	font-family: Robota;
+   	display: inline;
+    font-size: 18px;
 }
 
 
 .AlertBox h3 {
+	font-family: Calibri;
 	margin: 10px 10px;
 	padding: 0 10px;
 	overflow: auto;
 }
 
+.loader {
+	background-color: white;
+	z-index: 2;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	display: block;
+	bottom: 0%;
+	left: 0%;
+	animation: loading 5s linear 1;
+	animation-delay: 2s;
+}
+
+.parent-2 {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	max-width: 80vw;
+	max-height: 50vh; 
+	width: 70vw;
+	height: 40vh;
+	margin: 20px 20px;
+	transform: scale(0.80);
+	animation: slideInRight 2s linear 1;
+}
+
+
 #New_Message {
-	background-color: blue;
+	background-color: #3598db;
 	margin-top: 150px; 
 }
 #Success {
-	background-color: green;
+	background-color: #2dcc70;
 }
 #Error {
-	background-color: red;
+	background-color: #e84c3d;
 }
 #Info {
-	background-color: yellow;
+	background-color: #f1c40f;
 	margin-bottom: 150px;
 }
