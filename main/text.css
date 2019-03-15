@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @keyframes beauty {
 
  	0% {opacity: 0; transform:scale(0);}
@@ -8,13 +9,18 @@
 }
 
 @keyframes slideInRight {
-  from {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  50% {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
 
-  to {
+  100% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     transform: scale(0.8);
@@ -51,14 +57,16 @@
 	padding: 10px, 30px;
 }
 .AlertBox p {
-	font-family: Robota;
+	font-family: Roboto;
+	color: white;
    	display: inline;
     font-size: 18px;
 }
 
 
-.AlertBox h3 {
-	font-family: Calibri;
+.AlertBox h2 {
+	font-family: Roboto;
+	color: white;
 	margin: 10px 10px;
 	padding: 0 10px;
 	overflow: auto;
