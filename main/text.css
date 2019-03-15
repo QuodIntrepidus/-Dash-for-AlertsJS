@@ -23,53 +23,89 @@
   100% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    transform: scale(0.8);
   }
 }
 
+@keyframes fadeOut {
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+body {
+	margin:0;
+	overflow-x: hidden;
+}
 .parent {
-	float: left;
-	margin: 10px 10px;
-	animation: beauty 2s linear 1;
+    position: absolute;
+    top: calc((100vh - (48vh + 155px)) / 2);
+    left: 3rem;
+    /* margin: 10px 10px; */
+    animation: beauty 2s linear 1;
 }
 .AlertBox {
-	color: black;
-	box-sizing: content-box;
-	position: relative;
-	display: inline-block;
-	margin: 20px 20px;
-	max-width: 30vw;
-	max-height: 15vh;
-	width: 30vw;
-	height: 15vh;
-	padding: 20px 20px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	transform: scale(0.80);
-	border: 1px solid rgb(0, 0, 0);
-	border-radius: 0;
+    padding: 0.5rem;
+    margin: 10px;
+    color: black;
+    box-sizing: content-box;
+    position: relative;
+    display: inline-block;
+    max-width: 35vw;
+    max-height: 15vh;
+    width: 35vw;
+    height: 12vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    border-radius: 0;
+}
+
+.AlertBox--inline{
+padding: 0px 10px 0px 30px;
+    height: 12vh;
 }
 
 .AlertBox img {
-	float: left;
-	margin: 10px 10px;
-	padding: 10px, 30px;
+padding: 5px 0px 0px 0px;
+    height: 4rem;
+    width: 4rem;
 }
 .AlertBox p {
-	font-family: Roboto;
-	color: white;
-   	display: inline;
-    font-size: 18px;
+font-family: Roboto;
+    color: white;
+    display: inline-block;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
 }
 
 
-.AlertBox h2 {
-	font-family: Roboto;
-	color: white;
-	margin: 10px 10px;
-	padding: 0 10px;
-	overflow: auto;
+.AlertBox h1 {
+font-family: Roboto;
+    color: white;
+    display: inline-block;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0rem;
+    left: 10rem;
+}
+
+.AlertBox__closeIcon {
+    color: black;
+    background: white;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    /* padding: 1px; */
+    position: absolute;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    top: 0;
+}
+.AlertBox__closeIcon:hover {
+  color: #222;
 }
 
 .loader {
@@ -86,23 +122,20 @@
 }
 
 .parent-2 {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 40%;
-	max-width: 80vw;
-	max-height: 50vh; 
-	width: 70vw;
-	height: 40vh;
-	margin: 20px 20px;
-	transform: scale(0.80);
 	animation: slideInRight 2s linear 1;
+}
+
+.parent-2 img{
+	    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    top: 25vh;
+    left: 50vw;
 }
 
 
 #New_Message {
 	background-color: #3598db;
-	margin-top: 150px; 
 }
 #Success {
 	background-color: #2dcc70;
@@ -112,5 +145,8 @@
 }
 #Info {
 	background-color: #f1c40f;
-	margin-bottom: 150px;
+}
+
+.fadeout{
+	animation: fadeOut 700ms ease-in-out 1;
 }
