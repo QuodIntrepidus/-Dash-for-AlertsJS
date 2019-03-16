@@ -27,8 +27,12 @@
 }
 
 @keyframes fadeOut {
-	0%{opacity: 1}
-	100%{opacity: 0}
+	0%{opacity: 1;  display: inline-block;}
+	100%{opacity: 0; display: none;}
+}
+
+.fadeOut{
+	animation: fadeOut linear 1s 1 both;
 }
 body {
 	margin:0;
@@ -99,10 +103,10 @@ font-family: Roboto;
     text-align: center;
     /* padding: 1px; */
     position: absolute;
-    right: 10px;
+    right: 15px;
     height: 20px;
     width: 20px;
-    top: 0;
+    top: 10px;
 }
 .AlertBox__closeIcon:hover {
   color: #222;
@@ -147,6 +151,6 @@ font-family: Roboto;
 	background-color: #f1c40f;
 }
 
-.fadeout{
-	animation: fadeOut 700ms ease-in-out 1;
+.after-clicks{
+	font-family: Roboto;
 }

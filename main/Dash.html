@@ -46,5 +46,32 @@
 	<div class="parent-2">
 		<img src="../assets/group 1.png">
 	</div>
+	<script type="text/javascript">
+		  var acc = document.getElementsByClassName("AlertBox__closeIcon");
+			  var i;
+			  var count = 0;
+			  var alertboxmain;
+			  var alertboxinline;
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function(e) {
+			  	e.preventDefault();
+			    var alertboxinline = this.parentNode;
+			    var alertboxmain = alertboxinline.parentNode;
+			    var mainparent = alertboxmain.parentNode;
+			    alertboxmain.classList.add('fadeOut');
+			    window.setTimeout(function(){
+				alertboxmain.parentNode.removeChild(alertboxmain);
+			}, 1200);
+			    if(count < acc.length){
+			    	count++;
+			    }else if(count == acc.length + 1){
+			    	var heading = document.createElement('div');
+			    	mainparent.appendChild(heading);
+			    	heading.classList.add('after-clicks');
+			    	window.setTimeout(function(){heading.innerHTML = "Congratulations! You have no new notifications";}, 1200);
+			    }
+			  });
+			}
+	</script>
 </body>
 </html>
